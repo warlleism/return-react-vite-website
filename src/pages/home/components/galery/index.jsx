@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { Images } from "./images";
-import './style.scss'
 export default function GaleryCaroussel() {
 
     const [active, setActive] = useState({
@@ -20,7 +19,7 @@ export default function GaleryCaroussel() {
 
         image.forEach((img, index) => {
             if (index === block) {
-                setActive((prev) => ({
+                setActive(() => ({
                     block,
                     active: true
                 }))
@@ -29,7 +28,6 @@ export default function GaleryCaroussel() {
                 img.style.height = '300px'
             }
         })
-
     }
 
     useEffect(() => {
@@ -41,13 +39,13 @@ export default function GaleryCaroussel() {
     }, [])
 
     return (
-        <div id="galery" className="galery">
+        <div id="galery" className="w-full h-[90vh] flex  items-center justify-center transition-all duration-1000">
             {
-                Images.map((image, index) => {
+                Images?.map((image, index) => {
                     return (
                         <div key={index}
                             id="image"
-                            className="w-full relative h-[300px] transition-all duration-1000 ease-in-out overflow-y-auto scrollbar-none scroll-smooth cursor-pointer"
+                            className="w-full h-[300px] relative transition-all duration-1000 ease-in-out overflow-y-auto scrollbar-none scroll-smooth cursor-pointer"
                             onClick={() => handleClick(index)} style={{
                                 transform: active.active && active.block !== index ? 'scale(0.8)' : 'scale(1)',
                             }}>
