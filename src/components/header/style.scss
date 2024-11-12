@@ -1,14 +1,12 @@
-.header-container {
-    .title {
-        &::after {
-            content: " ";
-            left: 0;
-            width: 50px;
-            border-radius: 100px;
-            position: absolute;
-            bottom: 0;
-            height: 2px;
-            background: #040404;
-        }
+.title {
+    &::after {
+        content: " ";
+        left: 0;
+        width: 50px;
+        border-radius: 100px;
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background: #040404;
     }
 }

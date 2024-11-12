@@ -1,10 +1,8 @@
 import { useEffect } from 'react'
-import './style.scss'
-export default function HeaderText() {
+export default function HeaderTextCompoent() {
 
     useEffect(() => {
         const textContainer = document.querySelectorAll('#text-container')
-        console.log(textContainer)
         textContainer.forEach((textContainer, index) => {
             setTimeout(() => {
                 textContainer.style.transform = 'translateX(0%)'

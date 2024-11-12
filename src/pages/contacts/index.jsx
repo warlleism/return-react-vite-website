@@ -7,13 +7,15 @@ import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import Img from '../../assets/imagens/contact-img.png'
+
 export default function Contacts() {
     return (
         <>
             <Header />
             <div className="w-screen flex items-center justify-center bg-[#fbfbfb]">
                 <div className="w-[55vw] mt-[60px] h-[80vh] m-auto bg-[#ffff] relative shadow-2xl flex items-center justify-end">
-                    <div className=" flex flex-col justify-center gap-10 shadow-2xl absolute left-[-55px] top-1/2 transform -translate-y-1/2 w-[50%] h-[80%] bg-[#0e0e0e] rounded-[5px] border-box px-7 py-7">
+                    <div style={{ backgroundImage: `url(${Img})`, backgroundSize: 'cover' }} className="flex flex-col justify-center gap-10 shadow-2xl absolute left-[-55px] top-1/2 transform -translate-y-1/2 w-[50%] h-[85%]  rounded-[5px] border-box px-7 py-7">
                         <h1 className="text-[#fff] text-[2.2rem] font-ligth ">Contate-nos</h1>
                         <div className="flex items-center gap-2 ">
                             <CiLocationOn className="text-[#fff] text-[1.6rem]" />
@@ -31,7 +33,6 @@ export default function Contacts() {
                             <FaWhatsapp className="text-[#fff] text-[1.6rem]" />
                             <p className="text-[#959595]">(11) 99999-9999</p>
                         </div>
-
                         <div className="flex gap-5 pl-5 mt-10">
                             <FaInstagram className="text-[#959595] text-[1.8rem] cursor-pointer" />
                             <FaFacebook className="text-[#959595] text-[1.8rem] cursor-pointer" />
@@ -63,7 +64,7 @@ export default function Contacts() {
                         <button className="shadow-2xl w-[200px] text-white bg-[#0a0a0a] hover:bg-[#040404] font-medium rounded-[100px] px-3 py-4 text-center text-[1.2rem]">Enviar</button>
                     </form>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
