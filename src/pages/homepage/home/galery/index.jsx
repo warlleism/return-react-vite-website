@@ -51,7 +51,6 @@ export default function GaleryCarousselCompoent() {
         <div id="galery" className="w-full h-[90vh] flex  items-center justify-center transition-all duration-1000">
             {
                 Images?.map((image, index) => {
-                    
                     const commonImageStyles = {
                         filter: active.active && active.block === index ? 'grayscale(0%)' : 'grayscale(100%)',
                         pointerEvents: 'none',
@@ -61,7 +60,6 @@ export default function GaleryCarousselCompoent() {
                         width: '100%',
                         height: active.active && active.block === index ? '420px' : '100%',
                     };
-
                     return (
                         <div
                             key={index}
@@ -77,8 +75,11 @@ export default function GaleryCarousselCompoent() {
                                     <img
                                         key={imgIndex}
                                         src={imgSrc}
-                                        className={`flex justify-center items-center object-cover z-${50 - imgIndex - 2 * 10} transition-all duration-1000 ease-in-out`}
-                                        style={commonImageStyles}
+                                        className={`flex justify-center items-center transition-all duration-1000 ease-in-out`}
+                                        style={{
+                                            ...commonImageStyles,
+                                            zIndex: 50 - imgIndex * 10 
+                                        }}
                                     />
                                 )
                             })}
