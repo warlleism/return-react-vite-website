@@ -1,15 +1,19 @@
 import HeaderCompoent from "../../components/header";
-import HomeComponent from "./home/text";
-import AboutComponent from "./about";
-import ImgBlocks from "./imgBlocks";
+import HomeComponent from "./components/home/text";
+import AboutComponent from "./components/about";
+import ImgBlocks from "./components/imgBlocks";
+import Footer from "../../components/footer";
+import CarouselCompoent from "./components/carousel";
 export default function Home() {
 
     return (
-        <div style={{ backgroundColor: '#1a1a1a' }}>
+        <div>
             <HeaderCompoent />
             <HomeComponent />
             <AboutComponent />
             <ImgBlocks />
+            <CarouselCompoent />
+            <Footer />
         </div>
     )
 }

@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
+#img-content {
+    position: relative;
+
+    &::before {
+        content: "L'art éternisé";
+        width: 100%;
+        position: absolute;
+        top: -50px;
+        z-index: 9999;
+        font-size: 1.4rem;
+        color: #fff;
+        font-family: "Cedarville Cursive", cursive;
+    }
+}
+
+
 #first-block {
 
     &::after {
@@ -9,7 +25,7 @@
         bottom: -185px;
         width: 4vw;
         height: 186px;
-        background-color: #fff;
+        background-color: #1a1a1a;
     }
 
     &::before {
@@ -17,10 +33,16 @@
         position: absolute;
         right: -26vw;
         font-size: 1.4rem;
-        color: #ffff;
+        color: #1a1a1a;
         font-family: "Cedarville Cursive", cursive;
         bottom: 25%;
         width: 24vw;
+    }
+
+    #img-content {
+        &::before {
+            left: 0;
+        }
     }
 }
 
@@ -33,7 +55,7 @@
         bottom: -185px;
         width: 4vw;
         height: 186px;
-        background-color: #fff;
+        background-color: #1a1a1a;
     }
 
     &::before {
@@ -41,10 +63,18 @@
         position: absolute;
         left: -26vw;
         font-size: 1.4rem;
-        color: #ffff;
+        color: #1a1a1a;
         font-family: "Cedarville Cursive", cursive;
         bottom: 25%;
         width: 24vw;
+    }
+
+
+    #img-content {
+        &::before {
+            right: 0;
+            bottom: 0;
+        }
     }
 }
 
@@ -55,9 +85,15 @@
         position: absolute;
         right: -26vw;
         font-size: 1.4rem;
-        color: #ffff;
+        color: #1a1a1a;
         font-family: "Cedarville Cursive", cursive;
         bottom: 25%;
         width: 24vw;
+    }
+
+    #img-content {
+        &::before {
+            left: 0;
+        }
     }
 }

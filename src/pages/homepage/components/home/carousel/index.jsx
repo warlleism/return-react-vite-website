@@ -33,13 +33,13 @@ export default function GaleryCarousselCompoent() {
     }
 
     useEffect(() => {
-        const header = document.getElementById('header')
+
         document.addEventListener('click', (event) => {
             if (event.target.id !== 'image') {
-                header.style.zIndex = 999
+                document.getElementById('header').style.zIndex = 999
                 handleClick()
             } else {
-                header.style.zIndex = 0
+                document.getElementById('header').style.zIndex = 0
             }
         })
 
@@ -47,9 +47,6 @@ export default function GaleryCarousselCompoent() {
             if (window.scrollY >= 100) {
                 handleClick()
                 header.style.zIndex = 999
-                header.style.background = "#454343"
-            } else {
-                header.style.background = "none"
             }
         })
 
