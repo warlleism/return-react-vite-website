@@ -1,15 +1,15 @@
-import GaleryCarousselCompoent from "./home/galery"
-import HeaderCompoent from "../../components/header"
-import HeaderTextCompoent from "./home/text"
-import AboutComponent from "./about"
-
+import HeaderCompoent from "../../components/header";
+import HomeComponent from "./home/text";
+import AboutComponent from "./about";
+import ImgBlocks from "./imgBlocks";
 export default function Home() {
+
     return (
-        <div style={{ backgroundColor: '#fbfbfb' }}>
+        <div style={{ backgroundColor: '#1a1a1a' }}>
             <HeaderCompoent />
-            <HeaderTextCompoent />
-            <GaleryCarousselCompoent />
+            <HomeComponent />
             <AboutComponent />
+            <ImgBlocks />
         </div>
     )
 }

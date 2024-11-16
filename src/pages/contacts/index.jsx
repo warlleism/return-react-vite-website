@@ -13,10 +13,10 @@ export default function Contacts() {
     return (
         <>
             <Header />
-            <div className="w-screen flex items-center justify-center bg-[#fbfbfb]">
-                <div className="w-[55vw] mt-[60px] h-[80vh] m-auto bg-[#ffff] relative shadow-2xl flex items-center justify-end">
-                    <div style={{ backgroundImage: `url(${Img})`, backgroundSize: 'cover' }} className="flex flex-col justify-center gap-10 shadow-2xl absolute left-[-55px] top-1/2 transform -translate-y-1/2 w-[50%] h-[85%]  rounded-[5px] border-box px-7 py-7">
-                        <h1 className="text-[#fff] text-[2.2rem] font-ligth ">Contate-nos</h1>
+            <div className="w-screen h-[120vh] flex items-center justify-center bg-[#fbfbfb]">
+                <div className="w-[45vw] h-[70vh] mt-[160px] m-auto bg-[#ffff] relative shadow-2xl flex items-center justify-end">
+                    <div style={{backgroundColor: '#1a1a1a' }} className="flex flex-col justify-center gap-10 shadow-2xl absolute left-[-55px] top-1/2 transform -translate-y-1/2 w-[50%] h-[85%]  rounded-[5px] border-box px-7 py-7">
+                        <h1 className="text-[#fff] text-[2rem] font-ligth ">Contate-nos</h1>
                         <div className="flex items-center gap-2 ">
                             <CiLocationOn className="text-[#fff] text-[1.6rem]" />
                             <p className="text-[#959595] tracking-tight">Av. Paulista, 9999 - Bela Vista, São Paulo - SP</p>
@@ -42,7 +42,7 @@ export default function Contacts() {
                     </div>
                     <form action="" className="w-[55%] h-[100%] box-border px-10 py-10 flex flex-col gap-3 align-center justify-center">
                         <div className="flex flex-col mb-5">
-                            <h1 className="text-[#0e0e0e] text-[2.2rem] font-semibold ">Entre em Contato</h1>
+                            <h1 className="text-[#0e0e0e] text-[2rem] font-semibold ">Entre em Contato</h1>
                             <p className="text-[#959595] tracking-tight">sinta-se à vontade para nos deixar uma mensagem!</p>
                         </div>
                         <div>

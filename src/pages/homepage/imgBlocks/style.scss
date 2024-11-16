@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+#first-block {
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -185px;
+        width: 4vw;
+        height: 186px;
+        background-color: #fff;
+    }
+
+    &::before {
+        content: 'a arte é expressão, criatividade e conexão. Ela comunica emoções, histórias e ideias por meio de cores, formas, sons e movimentos. É universal, ultrapassando barreiras culturais e linguísticas. Inspiradora e transformadora, a arte desperta reflexões, resgata memórias e celebra a diversidade, enriquecendo nossas vidas com beleza e significado.';
+        position: absolute;
+        right: -26vw;
+        font-size: 1.4rem;
+        color: #ffff;
+        font-family: "Cedarville Cursive", cursive;
+        bottom: 25%;
+        width: 24vw;
+    }
+}
+
+#second-block {
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -185px;
+        width: 4vw;
+        height: 186px;
+        background-color: #fff;
+    }
+
+    &::before {
+        content: 'a arte é a manifestação da alma, expressa em cores, sons e formas. Ela transcende palavras, unindo culturas e inspirando emoções. Seja pela pintura, música ou dança, a arte transforma o cotidiano, resgatando memórias e criando novas perspectivas. É um reflexo da humanidade e celebra a diversidade do mundo.';
+        position: absolute;
+        left: -26vw;
+        font-size: 1.4rem;
+        color: #ffff;
+        font-family: "Cedarville Cursive", cursive;
+        bottom: 25%;
+        width: 24vw;
+    }
+}
+
+#third-block {
+
+    &::before {
+        content: 'a arte é o encontro da criatividade com a emoção. Ela traduz sentimentos em imagens, sons e gestos, comunicando o que palavras não conseguem expressar. Seja visual, sonora ou performática, a arte conecta pessoas, inspira reflexões e celebra a beleza do mundo, transformando realidades e tocando o coração humano.';
+        position: absolute;
+        right: -26vw;
+        font-size: 1.4rem;
+        color: #ffff;
+        font-family: "Cedarville Cursive", cursive;
+        bottom: 25%;
+        width: 24vw;
+    }
+}

@@ -29,26 +29,34 @@ export default function GaleryCarousselCompoent() {
                 img.style.height = '300px'
             }
         })
+
     }
 
     useEffect(() => {
-
+        const header = document.getElementById('header')
         document.addEventListener('click', (event) => {
             if (event.target.id !== 'image') {
+                header.style.zIndex = 999
                 handleClick()
+            } else {
+                header.style.zIndex = 0
             }
         })
 
-        document.addEventListener('scroll', (event) => {
+        document.addEventListener('scroll', () => {
             if (window.scrollY >= 100) {
                 handleClick()
+                header.style.zIndex = 999
+                header.style.background = "#454343"
+            } else {
+                header.style.background = "none"
             }
         })
 
     }, [])
 
     return (
-        <div id="galery" className="w-full h-[90vh] flex  items-center justify-center transition-all duration-1000">
+        <div id="galery" className="w-full h-[100vh] flex items-center justify-center transition-all duration-1000 ease-in-out" >
             {
                 Images?.map((image, index) => {
                     const commonImageStyles = {
@@ -78,7 +86,7 @@ export default function GaleryCarousselCompoent() {
                                         className={`flex justify-center items-center transition-all duration-1000 ease-in-out`}
                                         style={{
                                             ...commonImageStyles,
-                                            zIndex: 50 - imgIndex * 10 
+                                            zIndex: 50 - imgIndex * 10
                                         }}
                                     />
                                 )
