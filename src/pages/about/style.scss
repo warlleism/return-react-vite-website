@@ -1,0 +1,28 @@
+.text-about-container::first-letter {
+    color: #1a1a1a;
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 3rem;
+    margin-right: 5px;
+}
+
+.img-about {
+    position: relative;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.092);
+
+    img {
+        border: solid 5px #fff;
+        z-index: 99;
+    }
+
+    &::after {
+        content: '';
+        border: solid 5px #fff;
+        position: absolute;
+        right: 15px;
+        border-radius: 5px;
+        bottom: 15px;
+        width: 100%;
+        height: 100%;
+        background-color: #1a1a1a0d;
+    }
+}

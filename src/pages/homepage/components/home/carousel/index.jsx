@@ -29,27 +29,22 @@ export default function GaleryCarousselCompoent() {
                 img.style.height = '300px'
             }
         })
-
     }
 
     useEffect(() => {
-
         document.addEventListener('click', (event) => {
             if (event.target.id !== 'image') {
-                document.getElementById('header').style.zIndex = 999
+                document.getElementById('header').style.zIndex = 20
                 handleClick()
             } else {
                 document.getElementById('header').style.zIndex = 0
             }
         })
-
         document.addEventListener('scroll', () => {
             if (window.scrollY >= 100) {
                 handleClick()
-                header.style.zIndex = 999
             }
         })
-
     }, [])
 
     return (
@@ -80,7 +75,7 @@ export default function GaleryCarousselCompoent() {
                                     <img
                                         key={imgIndex}
                                         src={imgSrc}
-                                        className={`flex justify-center items-center transition-all duration-1000 ease-in-out`}
+                                        className="flex justify-center items-center transition-all duration-1000 ease-in-out"
                                         style={{
                                             ...commonImageStyles,
                                             zIndex: 50 - imgIndex * 10

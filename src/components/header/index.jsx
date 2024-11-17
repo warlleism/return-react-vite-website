@@ -6,11 +6,12 @@ export default function HeaderCompoent() {
     useEffect(() => {
         const header = document.getElementById('header')
         document.addEventListener('scroll', () => {
-            console.log(window.scrollY)
             if (window.scrollY > 0) {
                 header.style.background = "#fff"
+                header.style.zIndex = 20
             } else {
                 header.style.background = "none"
+                header.style.zIndex = 0
             }
         })
     }, [])
@@ -21,9 +22,9 @@ export default function HeaderCompoent() {
                 <div className='title text-[#1a1a1a] text-3xl font-light relative inline-block'>VIVARTE</div>
             </a>
             <ul className='flex gap-6 items-center list-none ml-[878px] '>
-                <li><a href='#' className='font-semibold tracking-tight text-base text-[#1a1a1a] no-underline'>Início</a></li>
-                <li><a href='#' className='font-semibold tracking-tight text-base text-[#1a1a1a] no-underline'>Galeria</a></li>
-                <li><a href='#' className='font-semibold tracking-tight text-base text-[#1a1a1a] no-underline'>Sobre</a></li>
+                <li><a href='/' className='font-semibold tracking-tight text-base text-[#1a1a1a] no-underline'>Início</a></li>
+                <li><a href='/galery' className='font-semibold tracking-tight text-base text-[#1a1a1a] no-underline'>Galeria</a></li>
+                <li><a href='/about' className='font-semibold tracking-tight text-base text-[#1a1a1a] no-underline'>Sobre</a></li>
                 <li><a href='#' className='font-semibold tracking-tight text-base text-[#1a1a1a] no-underline'>Serviços</a></li>
             </ul>
             <div className='flex items-center justify-center gap-3'>
@@ -33,7 +34,7 @@ export default function HeaderCompoent() {
                     </span>
                     Contato
                 </a>
-                <FaSun className='text-[#1a1a1a] text-[2rem] cursor-pointer cursor-pointer' />
+                <FaSun className='text-[#1a1a1a] text-[1.5rem] cursor-pointer cursor-pointer' />
             </div>
 
         </div>

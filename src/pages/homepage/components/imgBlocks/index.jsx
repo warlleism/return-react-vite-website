@@ -1,6 +1,6 @@
 import './style.scss'
 import Img1 from '../../../../assets/imagens/img1.png'
-import Img2 from '../../../../assets/imagens/img5.png'
+import Img2 from '../../../../assets/imagens/img6.png'
 import Img3 from '../../../../assets/imagens/img10.png'
 import SectionWrapper from '../../../../components/sectionWrapper/sectionWrapper'
 

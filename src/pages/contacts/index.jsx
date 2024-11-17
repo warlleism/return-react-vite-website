@@ -1,4 +1,4 @@
-import Header from "../../components/header"
+import HeaderCompoent from "../../components/header"
 import { CiLocationOn } from "react-icons/ci";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
@@ -12,8 +12,8 @@ export default function Contacts() {
 
     return (
         <>
-            <Header />
-            <div className="w-screen h-[120vh] flex items-center justify-center bg-[#fbfbfb]">
+            <HeaderCompoent />
+            <div className="w-screen h-[100vh] flex items-center justify-center bg-[#fbfbfb]">
                 <div className="w-[45vw] h-[70vh] mt-[160px] m-auto bg-[#fff] relative shadow-2xl flex items-center justify-end">
                     <div style={{ backgroundColor: '#1a1a1a' }} className="flex flex-col justify-center gap-10 shadow-2xl absolute left-[-55px] top-1/2 transform -translate-y-1/2 w-[50%] h-[85%]  rounded-[5px] border-box px-7 py-7">
                         <h1 className="text-[#fff] text-[2rem] font-ligth ">Contate-nos</h1>
