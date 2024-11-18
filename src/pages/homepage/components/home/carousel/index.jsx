@@ -17,8 +17,10 @@ export default function GaleryCarousselCompoent() {
         }
 
         const image = document.querySelectorAll('#image')
+       
 
         image.forEach((img, index) => {
+            img.scrollTo(0, 0)
             if (index === block) {
                 setActive(() => ({
                     block,
@@ -52,13 +54,12 @@ export default function GaleryCarousselCompoent() {
             {
                 Images?.map((image, index) => {
                     const commonImageStyles = {
-                        filter: active.active && active.block === index ? 'grayscale(0%)' : 'grayscale(100%)',
+                        width: '100%',
                         pointerEvents: 'none',
                         borderRadius: active.active ? 5 : 0,
-                        marginBottom: active.active && active.block === index ? '20px' : '0',
-                        position: active.active && active.block === index ? 'relative' : 'absolute',
-                        width: '100%',
                         height: active.active && active.block === index ? '420px' : '100%',
+                        marginBottom: active.active && active.block === index ? '20px' : '0',
+                        filter: active.active && active.block === index ? 'grayscale(0%)' : 'grayscale(100%)',
                     };
                     return (
                         <div
@@ -66,9 +67,7 @@ export default function GaleryCarousselCompoent() {
                             id="image"
                             className="w-full h-[300px] relative transition-all duration-1000 ease-in-out overflow-y-auto scrollbar-none scroll-smooth cursor-pointer"
                             onClick={() => handleClick(index)}
-                            style={{
-                                transform: active.active && active.block !== index ? 'scale(0.8)' : 'scale(1)',
-                            }}
+                            style={{ transform: active.active && active.block !== index ? 'scale(0.8)' : 'scale(1)' }}
                         >
                             {image.imagens.map((imgSrc, imgIndex) => {
                                 return (
