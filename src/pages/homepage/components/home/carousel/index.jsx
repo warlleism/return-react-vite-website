@@ -18,7 +18,6 @@ export default function GaleryCarousselCompoent() {
 
         const image = document.querySelectorAll('#image')
        
-
         image.forEach((img, index) => {
             img.scrollTo(0, 0)
             if (index === block) {

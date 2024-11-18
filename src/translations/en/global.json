@@ -1,0 +1,21 @@
+{
+    "header": {
+        "title": "VIVARTE",
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "galery": "Galery",
+        "contact": "Contact"
+    },
+    "home-page": {
+        "title": "VIBRANT PALETTE",
+        "subtitle": "ARTISTIC INSPIRATION",
+        "about": {
+            "title": "ARTE CONCEITOS",
+            "description": "Contemporary art is a reflection of the diversity and complexity of the modern world. It transcends traditional forms, exploring new languages, techniques, and concepts. Whether through painting, sculpture, photography, performance, or installations, contemporary art questions established norms and challenges the audience to think about social, cultural, and political issues. It is a living expression, constantly evolving, creating a unique dialogue between the artist and the viewer.",
+            "bg-text-1": "CONTEMPORARY",
+            "bg-text-2": "CREATIVITY",
+            "button": "Learn More"
+        }
+    }
+}

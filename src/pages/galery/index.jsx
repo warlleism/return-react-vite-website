@@ -1,32 +1,45 @@
-import { galeryImages } from "./images";
+import { artGallery } from "./images";
 import HeaderCompoent from "../../components/header";
 import { MdDownload } from "react-icons/md";
 import { FaExpand } from "react-icons/fa";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { CiZoomIn } from "react-icons/ci";
 import { CiZoomOut } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
 
 export default function Galery() {
     const [images, setImage] = useState('');
     const [zoom, setZoom] = useState(1);
+    const [filteredImage, setFilteredImage] = useState([]);
+    const data = filteredImage.length !== 0 ? filteredImage : artGallery;
 
-    const handleZoom = () => {
-        if (zoom == 1) {
-            setZoom(2);
-        } else {
-            setZoom(1);
-        };
-    };
+    const handleZoom = useCallback(() => {
+        setZoom((prevZoom) => (prevZoom === 1 ? 2 : 1));
+    }, [zoom]);
 
-    const handleModal = (image) => {
+    const handleModal = useCallback((image) => {
         setZoom(1);
-        if (image) {
-            setImage(image);
-        } else {
-            setImage('');
-        };
-    }
+        setImage(image || '');
+    }, [zoom]);
+
+    const handleFilter = useCallback((e) => {
+        const gallery = document.getElementById('gallery-container');
+        gallery.style.opacity = 0;
+
+        setTimeout(() => {
+            const value = e.target.value.toLowerCase();
+            const filtered = artGallery.filter((item) =>
+                item.title.toLowerCase().trim().includes(value.trim())
+            );
+            setFilteredImage(filtered.length === 0 ? artGallery : filtered);
+        }, 900)
+
+        setTimeout(() => {
+            gallery.style.opacity = 1;
+        }, 900)
+    }, []);
+
     return (
         <>
             {
@@ -56,17 +69,25 @@ export default function Galery() {
                     Aqui você encontrará um espaço dedicado à expressão criativa, onde a arte ganha vida em formas, cores e texturas.
                     Minha paixão por arte plástica se manifesta em obras que exploram sentimentos, perspectivas e histórias, conectando o espectador a um mundo de possibilidades visuais.
                 </div>
-                <div className="w-full flex items-center flex-wrap justify-center">
-                    {galeryImages.map((image, index) => (
+                <div className="justify-center w-full mb-5">
+                    <div className="flex items-center w-[90%] m-auto shadow-lg h-[5vh] rounded-[100px] overflow-hidden">
+                        <div className="h-full w-[4%] flex items-center justify-center bg-[#1c1c1c]">
+                            <CiSearch className=" text-[#fff] text-[2rem]" />
+                        </div>
+                        <input type="text" className="w-[97%] h-[100%] outline-none border-box pl-5 bg-[#dddddd]" onChange={(e) => handleFilter(e)} />
+                    </div>
+                </div>
+                <div id="gallery-container" className="w-full flex items-center flex-wrap justify-center transition-all duration-1000 ease-in-out">
+                    {data.map((image, index) => (
                         <div key={index} className="w-[30vw] h-[50vh] relative flex items-center justify-center hover:scale-105 hover:z-10 transition-all duration-1000 ease-in-out">
                             <div className="absolute top-2 left-2 text-[2rem] text-white  flex gap-2 cursor-pointer">
-                                <FaExpand className="transition-all duration-1000 ease-in-out hover:scale-125 bg-[#ffffffcf] text-[#000] rounded-[5px] p-1" onClick={() => handleModal(image)} />
-                                <a href={image} download={`image-${index + 1}.jpg`}>
+                                <FaExpand className="transition-all duration-1000 ease-in-out hover:scale-125 bg-[#ffffffcf] text-[#000] rounded-[5px] p-1" onClick={() => handleModal(image.url)} />
+                                <a href={image.url} download={`image-${index + 1}.jpg`}>
                                     <MdDownload className="transition-all duration-1000 ease-in-out hover:scale-125 bg-[#ffffffcf] text-[#000] rounded-[5px] p-1" />
                                 </a>
                             </div>
                             <div className="transition-all duration-1000 ease-in-out w-[100%] h-[100%] flex items-center justify-center cursor-pointer ">
-                                <img src={image} alt={`Gallery image ${index + 1}`} className="w-[100%] h-[100%] object-cover" onClick={() => handleModal(image)} />
+                                <img src={image.url} alt={`Gallery image ${index + 1}`} className="w-[100%] h-[100%] object-cover" onClick={() => handleModal(image.url)} />
                             </div>
                         </div>
                     ))}

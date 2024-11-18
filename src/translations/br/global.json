@@ -1,0 +1,21 @@
+{
+    "header": {
+        "title": "VIVARTE",
+        "home": "Início",
+        "about": "Sobre",
+        "services": "Serviços",
+        "galery": "Galeria",
+        "contact": "Contato"
+    },
+    "home-page": {
+        "title": "PALETA VIBRANTE",
+        "subtitle": "INSPIRAÇÃO ARTÍSTICA",
+        "about": {
+            "title": "ARTE CONCEITOS",
+            "description": "A arte contemporânea é um reflexo da diversidade e complexidade do mundo moderno. Ela ultrapassa as fronteiras das formas tradicionais, explorando novas linguagens, técnicas e conceitos. Seja através de pintura, escultura, fotografia, performance ou instalações, a arte contemporânea questiona as normas estabelecidas e desafia o público a pensar sobre questões sociais, culturais e políticas. É uma expressão viva, em constante evolução, que conecta o passado ao futuro, criando um diálogo único entre o artista e o espectador.",
+            "bg-text-1": "CONTEMPORÂNEO",
+            "bg-text-2": "CRIATIVIDADE",
+            "button": "Saiba Mais"
+        }
+    }
+}
