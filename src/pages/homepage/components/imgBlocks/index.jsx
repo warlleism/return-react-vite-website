@@ -7,7 +7,7 @@ import SectionWrapper from '../../../../components/sectionWrapper/sectionWrapper
 export default function ImgBlocks() {
 
     return (
-        <SectionWrapper style={'fade-in-left'}>
+        <SectionWrapper style={'fade-in'}>
             <div className="w-full h-[270vh] overflow-hidden relative lg-max:hidden">
                 <div className='w-[60%] m-auto mt-[120px] mb-[120px] text-center text-[#1a1a1aa3] text-2xl font-light'>A arte é o encontro da criatividade com a emoção. Ela traduz sentimentos em imagens, sons e gestos, comunicando o que palavras não conseguem expressar. Seja visual, sonora ou performática, a arte conecta pessoas, inspira reflexões e celebra a beleza do mundo, transformando realidades e tocando o coração humano.</div>
                 <div className='w-[56vw] h-full relative  m-auto'>

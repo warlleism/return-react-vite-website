@@ -31,7 +31,7 @@ export default function HeaderCompoent() {
                 header.style.zIndex = 0
             }
         })
-    }, [])
+    }, [menu])
 
     return (
         <div id='header' style={{ zIndex: '10' }} className='h-[10vh] w-full flex box-border top-0 left-0 px-10 items-center justify-between position fixed transition-all duration-2000 ease-in-out'  >

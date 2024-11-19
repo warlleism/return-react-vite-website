@@ -11,7 +11,7 @@ export default function AboutComponent() {
     const [t] = useTranslation("global");
 
     return (
-        <SectionWrapper style={'fade-in-left'}>
+        <SectionWrapper style={'fade-in'}>
             <div id="about" className="h-screen w-full flex md-max:flex-col justify-center items-center flex gap-10 relative overflow-hidden">
                 <div className='uppercase font-bold text-[20.5rem] tracking-[-10px] top-0 left-[10px] inline-block text-[#4543431a] absolute'>{t("home-page.about.bg-text-1")}</div>
                 <div className='uppercase font-bold text-[20.5rem] tracking-[-10px] bottom-0 left-[10px] inline-block text-[#4543431a] absolute'>{t("home-page.about.bg-text-2")}</div>
