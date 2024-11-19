@@ -64,7 +64,7 @@ export default function GaleryCarousselCompoent() {
                         <div
                             key={index}
                             id="image"
-                            className="w-full h-[300px] relative transition-all duration-1000 ease-in-out overflow-y-auto scrollbar-none scroll-smooth cursor-pointer"
+                            className="w-full h-[300px] md-max:h-[240px] relative transition-all duration-1000 ease-in-out overflow-y-auto scrollbar-none scroll-smooth cursor-pointer md-max:pointer-events-none"
                             onClick={() => handleClick(index)}
                             style={{ transform: active.active && active.block !== index ? 'scale(0.8)' : 'scale(1)' }}
                         >
@@ -73,7 +73,7 @@ export default function GaleryCarousselCompoent() {
                                     <img
                                         key={imgIndex}
                                         src={imgSrc}
-                                        className="flex justify-center items-center transition-all duration-1000 ease-in-out"
+                                        className="flex justify-center items-center transition-all duration-1000 ease-in-out lg-max:object-cover"
                                         style={{
                                             ...commonImageStyles,
                                             zIndex: 50 - imgIndex * 10

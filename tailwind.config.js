@@ -7,11 +7,15 @@ export default {
   theme: {
     extend: {
       screens: {
-        'max-h-745': { 'raw': '(max-height: 745px)' },
+        'sm-max': { max: '682px' },
+        'md-max': { max: '846px' },
+        'lg-max': { max: '1080px' },
+        'xl-max': { max: '1440px' },
+        '2xl-max': { max: '1638px' },
       },
     },
   },
   plugins: [
     require('tailwind-scrollbar'),
   ],
-}
+};

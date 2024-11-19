@@ -65,21 +65,24 @@ export default function Galery() {
             <HeaderCompoent />
             <div className="w-full flex flex-col items-center flex-wrap justify-center border-box py-40">
                 <div className="text-[3rem] font-ligth text-[#1a1a1a] text-center mb-5">GALERIA</div>
-                <div className="text-[1.2rem] font-light text-[#1a1a1a] text-center w-[60%] mb-20 flex ">
+                <div className="text-[1.2rem] font-light text-[#1a1a1a] text-center w-[60%] mb-20 flex md-max:text-[1rem] md-max:w-[90%] ">
                     Aqui você encontrará um espaço dedicado à expressão criativa, onde a arte ganha vida em formas, cores e texturas.
                     Minha paixão por arte plástica se manifesta em obras que exploram sentimentos, perspectivas e histórias, conectando o espectador a um mundo de possibilidades visuais.
                 </div>
                 <div className="justify-center w-full mb-5">
                     <div className="flex items-center w-[90%] m-auto shadow-lg h-[5vh] rounded-[100px] overflow-hidden">
-                        <div className="h-full w-[4%] flex items-center justify-center bg-[#1c1c1c]">
+                        <div className="h-full w-[3%] flex items-center justify-center bg-[#1c1c1c] lg-max:w-[10%]">
                             <CiSearch className=" text-[#fff] text-[2rem]" />
                         </div>
-                        <input type="text" className="w-[97%] h-[100%] outline-none border-box pl-5 bg-[#dddddd]" onChange={(e) => handleFilter(e)} />
+                        <input type="text" className="w-[97%] h-[100%] outline-none border-box pl-5 bg-[#dddddd] lg-max:w-[90%]" onChange={(e) => handleFilter(e)} />
                     </div>
                 </div>
                 <div id="gallery-container" className="w-full flex items-center flex-wrap justify-center transition-all duration-1000 ease-in-out">
                     {data.map((image, index) => (
-                        <div key={index} className="w-[30vw] h-[50vh] relative flex items-center justify-center hover:scale-105 hover:z-10 transition-all duration-1000 ease-in-out">
+                        <div key={index} className="w-[30vw] h-[50vh] relative flex items-center justify-center hover:scale-105 hover:z-10 transition-all duration-1000 ease-in-out lg-max:w-[30vw] lg-max:h-[30vh]">
+                            <div className="absolute flex justify-center items-center w-[100%] h-[100%] bg-[#0000004f] text-center text-white text-[2rem] hover:hover:opacity-0 transition-all duration-1000 ease-in-out lg-max:text-[.8rem] ">
+                                {image.title}
+                            </div>
                             <div className="absolute top-2 left-2 text-[2rem] text-white  flex gap-2 cursor-pointer">
                                 <FaExpand className="transition-all duration-1000 ease-in-out hover:scale-125 bg-[#ffffffcf] text-[#000] rounded-[5px] p-1" onClick={() => handleModal(image.url)} />
                                 <a href={image.url} download={`image-${index + 1}.jpg`}>
