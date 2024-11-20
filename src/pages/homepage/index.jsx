@@ -4,6 +4,7 @@ import AboutComponent from "./components/about";
 import ImgBlocks from "./components/imgBlocks";
 import Footer from "../../components/footer";
 import CarouselCompoent from "./components/carousel";
+import GaleryComponent from "./components/galery";
 export default function Home() {
 
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <HomeComponent />
             <AboutComponent />
             <ImgBlocks />
+            <GaleryComponent />
             <CarouselCompoent />
             <Footer />
         </div>

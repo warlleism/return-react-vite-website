@@ -7,6 +7,7 @@ import { IoClose } from "react-icons/io5";
 import { CiZoomIn } from "react-icons/ci";
 import { CiZoomOut } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
+import FooterCompoent from "../../components/footer";
 
 export default function Galery() {
     const [images, setImage] = useState('');
@@ -95,7 +96,8 @@ export default function Galery() {
                         </div>
                     ))}
                 </div>
-            </div >
+            </div>
+            <FooterCompoent />
         </>
     );
 }

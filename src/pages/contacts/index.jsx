@@ -7,6 +7,8 @@ import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import FooterCompoent from "../../components/footer";
+
 
 export default function Contacts() {
 
@@ -64,7 +66,8 @@ export default function Contacts() {
                         <button className="shadow-2xl w-[200px] text-white bg-[#0a0a0a] hover:bg-[#040404] font-medium rounded-[100px] px-3 py-4 text-center text-[1.2rem]">Enviar</button>
                     </form>
                 </div>
-            </div >
+            </div>
+            <FooterCompoent />
         </>
     )
 }
