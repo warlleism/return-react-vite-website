@@ -58,7 +58,7 @@ export default function Galery() {
                             </a>
                             <IoClose className="transition-all duration-1000 ease-in-out hover:scale-125" onClick={() => handleModal('')} />
                         </div>
-                        <img src={images} alt="Full image" className={`w-[50%] h-[80%] object-cover z-50 ${zoom == 2 ? 'scale-125' : ''}  transition-all duration-1000 ease-in-out`} />
+                        <img src={images} alt="Full image" className={`w-[50%] h-[80%] object-cover z-50 ${zoom == 2 ? 'scale-125' : ''}  transition-all duration-1000 ease-in-out md-max:w-[90%] h-[40%]`} />
                         <div className="absolute w-full z-40 h-full left-0 top-0 bg-[#0000004f]" onClick={() => handleModal('')} />
                     </div>
                 )
