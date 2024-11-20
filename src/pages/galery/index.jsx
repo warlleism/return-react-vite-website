@@ -73,7 +73,7 @@ export default function Galery() {
                 <div className="justify-center w-full mb-5">
                     <div className="flex items-center w-[90%] m-auto shadow-lg h-[5vh] rounded-[100px] overflow-hidden">
                         <div className="h-full w-[3%] flex items-center justify-center bg-[#1c1c1c] lg-max:w-[10%]">
-                            <CiSearch className=" text-[#fff] text-[2rem]" />
+                            <CiSearch className=" text-[#fff] text-[2rem] md-max:text-[1.3rem]" />
                         </div>
                         <input type="text" className="w-[97%] h-[100%] outline-none border-box pl-5 bg-[#dddddd] lg-max:w-[90%]" onChange={(e) => handleFilter(e)} />
                     </div>
