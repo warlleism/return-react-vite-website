@@ -47,7 +47,7 @@ export default function About() {
                                     <img src={Img2} alt="Artistic representation" className="object-cover rounded-[5px] img-about w-[100%] h-[100%]" />
                                 </div>
                                 <div className="flex flex-col w-[68%] lg-max:w-full">
-                                    <p className="text-about-container text-[1.3rem] w-[68%] tracking-tight lg-max:w-full lg-max:text-[1rem] lg-max:mt-9">
+                                    <p className="text-about-container text-[1.3rem] w-[100%] tracking-tight lg-max:w-full lg-max:text-[1rem] lg-max:mt-9">
                                         Cada obra de arte é um universo em si, repleto de histórias, emoções e significados.
                                         Quem foram os mestres por trás dessas criações? Quais vivências os inspiraram?
                                         Nosso objetivo é revelar as narrativas ocultas, permitindo que você mergulhe mais
@@ -76,7 +76,7 @@ export default function About() {
                                     <img src={Img3} alt="Inspiring art" className="object-cover rounded-[5px] img-about w-[100%] h-[100%]" />
                                 </div>
                                 <div className="flex flex-col w-[68%] lg-max:w-full">
-                                    <p className="text-about-container text-[1.3rem] w-[68%] tracking-tight lg-max:w-full lg-max:text-[1rem] lg-max:mt-9">
+                                    <p className="text-about-container text-[1.3rem] w-[100%] tracking-tight lg-max:w-full lg-max:text-[1rem] lg-max:mt-9">
                                         Nossa visão é transformar a arte em um elo de conexão entre pessoas de todos os
                                         lugares. Através de exposições, discussões e compartilhamento, buscamos criar
                                         um ambiente onde a troca de ideias flua livremente, enriquecendo todos os envolvidos.
